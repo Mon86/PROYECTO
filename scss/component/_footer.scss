@@ -1,0 +1,80 @@
+footer{
+    border:2px solid black;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+
+
+.info{
+    ul li{display: inline-block ;
+        margin: 0;
+            img{
+                max-width: 60%;}
+
+    }
+
+}
+    
+
+.telefono{
+    max-height: 1rem;
+    top:50px;
+    right:30px;
+    color:black;
+    position:fixed;
+    position:center;
+         
+    img{
+        width: 2rem;
+    }
+}
+@media (max-width:480px){
+
+    .info{display: flex;
+        ul li{display: inline-block;
+               img{width: 60%;}
+      
+        }
+    }
+
+    .telefono{
+        max-height: 2rem;
+        top:4.5rem;
+        right:2rem;
+        color:black;
+        position:fixed;
+        position:center;
+
+        img{
+            width: 10%;
+        }
+    }
+}
+@media (min-width: 481px) and (max-width: 992px){
+    .info{display: flex;
+        ul li{display: inline-block;
+           
+                img{width: 60%;}
+        }
+    }
+       
+    }
+    
+    .telefono{
+        max-height: 2rem;
+        top: 5.5rem;
+        right:2.5rem;
+        color:black;
+        position:fixed;
+        position:center;
+
+        img{
+            width: 3rem;
+        }
+    
+       
+    
+}

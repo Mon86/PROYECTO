@@ -1,0 +1,93 @@
+.main-index{
+    width:100%;
+    display: grid;
+    grid-template-areas:
+    "main aside" "main aside";
+    row-gap: 1rem;
+    background-image: url(../img/fondom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    .main_article{
+        grid-area: main;
+        margin:0.5rem;
+        max-width: 100%;
+
+        img{
+            max-width: 90%;
+            margin-left: 0px;
+            border:$border-banner;
+        }
+    }
+}
+.oculto{visibility: hidden;}
+
+.aside_main{
+    grid-area: aside;
+
+     img{
+        margin:1rem;
+        max-width: 45%;
+        border-radius: 10px;
+        height: auto;
+    }
+}
+.h2{
+    @extend %h2;
+    height: 100%;
+}
+    
+.segunda_main{
+ @include main;
+    display: grid;
+    grid-template-areas: "imagen imagen imagen" 
+    "imagen imagen imagen" ;
+    gap:2rem;
+    }
+    
+    
+.mas_vendidos{
+    img{
+        grid-area: imagen;
+       @extend %img;
+        padding: auto;
+        &:hover{
+            border-radius:15px;
+        } 
+    }
+}  
+
+@media (max-width:480px){
+    .oculto{visibility: visible;}
+    .aside_main{display: none;}
+
+    .segunda_main{
+        height: 80vh;
+        grid-template-areas:"imagen";
+        padding: 1rem;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow: scroll;
+     }
+    
+  
+  }
+  
+
+
+@media (min-width: 481px) and (max-width: 992px){
+    .oculto{visibility: visible;}
+    .aside_main{display: none;}
+
+    .segunda_main{
+        height: 80vh;
+  
+        grid-template-areas:"imagen imagen";
+        padding: 1rem;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow: scroll;
+     }
+    
+}

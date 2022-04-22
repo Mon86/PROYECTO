@@ -1,0 +1,411 @@
+.mas_vendidos img, .main-promociones .mas_vendidos img, .main-libreria .mas_vendidos img, .main-jugueteria .mas_vendidos img {
+  max-width: 50%;
+  border: 1px solid red;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+.h2 {
+  width: 100%;
+  font-size: 4rem;
+  background-color: lightgreen;
+  border: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: toys;
+  src: url(./ToysRUs-FontSolid.ttf);
+}
+
+/* --------COMIENZO CSS-------- */
+body {
+  font-family: "toys", "Times New Roman", Times, serif;
+}
+
+h1 {
+  display: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: blue;
+}
+
+header {
+  background-color: #c6fa5e;
+  padding: 0.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header img {
+  max-height: 5rem;
+  margin: 1rem;
+}
+
+header .header_nav {
+  min-width: 90%;
+}
+
+header .header_nav ul li {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  display: inline-block;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+header .header_nav ul li:hover {
+  background-color: #00ffff;
+  border-radius: 10px;
+}
+
+.carrusel {
+  max-width: 30rem;
+}
+
+.main-index {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "main aside" "main aside";
+  row-gap: 1rem;
+  background-image: url(../img/fondom.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-index .main_article {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  margin: 0.5rem;
+  max-width: 90%;
+}
+
+.main-index .main_article img {
+  max-width: 100%;
+  margin-left: 0px;
+  border: 2px dotted red;
+}
+
+.aside_main {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: aside;
+}
+
+.aside_main img {
+  margin: 1rem;
+  max-width: 45%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.h2 {
+  height: 100%;
+}
+
+.segunda_main {
+  background-image: url("../img/masvendidos.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "imagen imagen imagen"  "imagen imagen imagen";
+  gap: 2rem;
+}
+
+.mas_vendidos img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: imagen;
+  padding: auto;
+}
+
+.mas_vendidos img:hover {
+  border-radius: 15px;
+}
+
+.footer {
+  border: 1px solid black;
+  width: 101%;
+}
+
+.footer_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: lightblue;
+  height: 100%;
+  padding: 1rem;
+}
+
+.info {
+  font-size: 2rem;
+  color: black;
+  margin: 1rem auto;
+}
+
+.info:hover {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.telefono {
+  max-height: 2px;
+  top: 50px;
+  right: 30px;
+  color: black;
+  position: fixed;
+  position: center;
+}
+
+.telefono img {
+  width: 50px;
+}
+
+@media (max-width: 480px) {
+  .info {
+    font-size: 1rem;
+  }
+  .info:hover {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  .telefono {
+    max-height: 0.5rem;
+    top: 4.5rem;
+    right: 2rem;
+    color: black;
+    position: fixed;
+    position: center;
+  }
+  .telefono img {
+    width: 2rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .info {
+    font-size: 2rem;
+  }
+  .info:hover {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  .telefono {
+    max-height: 1rem;
+    top: 5.5rem;
+    right: 2.5rem;
+    color: black;
+    position: fixed;
+    position: center;
+  }
+  .telefono img {
+    width: 2.5rem;
+  }
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section article {
+  width: 80%;
+}
+
+section article .pregunta_titulo {
+  font-size: 2rem;
+  color: red;
+  text-align: center;
+  margin: 0 auto;
+}
+
+section article .respuesta {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
+.main-promociones {
+  background-image: url("../img/masvendidos.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "imagen imagen "  "imagen imagen ";
+  gap: 1.5rem;
+  height: 800px;
+  padding: 1rem;
+}
+
+.main-promociones .mas_vendidos img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: imagen;
+  padding: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-promociones .mas_vendidos img:hover {
+  border-radius: 15px;
+}
+
+@media (max-width: 480px) {
+  .main-promociones {
+    height: 80vh;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .main-promociones {
+    height: 80vh;
+  }
+}
+
+.main-libreria {
+  background-image: url("../img/masvendidos.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "imagen imagen imagen"  "imagen imagen imagen";
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.main-libreria .mas_vendidos img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: imagen;
+  padding: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-libreria .mas_vendidos img:hover {
+  border-radius: 15px;
+}
+
+.main-libreria .mas_vendidos .comprar {
+  background-color: #00ffff;
+  border-style: hidden;
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .main-libreria {
+    height: 80vh;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .main-libreria {
+    height: 80vh;
+  }
+}
+
+.main-jugueteria {
+  background-image: url("../img/masvendidos.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "imagen imagen imagen"  "imagen imagen imagen";
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.main-jugueteria .mas_vendidos img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: imagen;
+  padding: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-jugueteria .mas_vendidos img:hover {
+  border-radius: 15px;
+}
+
+@media (max-width: 480px) {
+  .main-jugueteria {
+    height: 80vh;
+        grid-template-areas: "imagen";
+    padding: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow: scroll;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .main-jugueteria {
+    height: 80vh;
+        grid-template-areas: "imagen imagen";
+    padding: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow: scroll;
+  }
+}
+/*# sourceMappingURL=style.css.map */

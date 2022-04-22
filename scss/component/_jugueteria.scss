@@ -1,0 +1,51 @@
+.main-jugueteria{
+  @include main;
+    display: grid;
+    grid-template-areas: "imagen imagen imagen" 
+    "imagen imagen imagen" ;
+    gap:2rem;
+   
+   padding: 1rem;
+
+ 
+ .mas_vendidos{
+      img{
+         grid-area: imagen;
+         @extend %img;
+         padding: auto;
+         align-items: center;
+         
+         &:hover{
+            border-radius:15px;
+         } 
+      }
+   }  
+}
+    
+
+@media (max-width:480px){
+   .main-jugueteria{
+      height: 80vh;
+      grid-template-areas:"imagen";
+      padding: 1rem;
+      justify-content: center;
+      flex-wrap: nowrap;
+      overflow: scroll;
+   }
+  
+
+}
+
+@media (min-width: 481px) and (max-width: 992px){
+   .main-jugueteria{
+      height: 80vh;
+
+      grid-template-areas:"imagen imagen";
+      padding: 1rem;
+      justify-content: center;
+      flex-wrap: nowrap;
+      overflow: scroll;
+   }
+  
+
+}

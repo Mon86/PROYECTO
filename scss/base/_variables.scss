@@ -1,0 +1,41 @@
+$border-img: 1px solid red;
+$border-banner: 2px dotted red;
+$font:"toys",'Times New Roman', Times, serif;
+
+
+
+$colores:(
+    bg-header:rgb(198, 250, 94),
+    bg-hover: #00ffff,
+    bg-footer:lightblue,
+    negro: black,
+    rojo:red,
+);
+
+@mixin posicion($display, $justify, $align) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+};
+
+%img{
+    max-width: 50%; 
+    border:$border-img;
+    border-radius: 50%;
+    margin:0.5rem;
+};
+%h2{
+    width:100%;
+    font-size: 4rem;
+    background-color: lightgreen;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+};
+
+@mixin main{
+ 
+    background-color: rgb(241, 15, 15);
+    max-width: 100%;
+    
+}
